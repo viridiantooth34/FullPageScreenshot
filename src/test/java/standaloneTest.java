@@ -21,7 +21,7 @@ public class standaloneTest {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		
-		driver.get("https://www.GITHUB.com");
+		driver.get("https://www.google.com");
 		driver.manage().window().maximize();
 		
 		
@@ -30,15 +30,14 @@ public class standaloneTest {
 		 * FileHandler.copy(src, new File("Screenshots/First1.png"));
 		 */ 
 		
-		//Shutterbug
-		
-		  Shutterbug.shootPage(driver, Capture.FULL, true).withName("first").save(
-		  "Screenshots\\");
-		  
+		 //Shutterbug
+		  String screenshot_name = "amazon";
+		  Shutterbug.shootPage(driver, Capture.FULL, true).withName(screenshot_name).save("Screenshots\\");
+		 
+		 
 		 
 		
 		
-		Thread.sleep(5000);
 		driver.quit();
 	}
 
